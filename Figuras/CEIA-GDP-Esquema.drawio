@@ -1,0 +1,117 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="26.0.2" pages="2">
+  <diagram name="Diagrama en bloques" id="viOvZfvEC3Nm27G9Bghc">
+    <mxGraphModel dx="1006" dy="557" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="_OaTzdXBvvJeqG0Sq9bI-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="_OaTzdXBvvJeqG0Sq9bI-1" target="_OaTzdXBvvJeqG0Sq9bI-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_OaTzdXBvvJeqG0Sq9bI-1" value="Base de datos" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="185" width="70" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="_OaTzdXBvvJeqG0Sq9bI-3" value="Repositorio de videos" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="_OaTzdXBvvJeqG0Sq9bI-4" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.mscae.general.video" vertex="1" parent="_OaTzdXBvvJeqG0Sq9bI-3">
+          <mxGeometry x="10" y="40" width="49" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="_OaTzdXBvvJeqG0Sq9bI-5" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.mscae.general.video" vertex="1" parent="_OaTzdXBvvJeqG0Sq9bI-3">
+          <mxGeometry x="75" y="40" width="49" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="_OaTzdXBvvJeqG0Sq9bI-6" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.mscae.general.video" vertex="1" parent="_OaTzdXBvvJeqG0Sq9bI-3">
+          <mxGeometry x="140" y="40" width="49" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="_OaTzdXBvvJeqG0Sq9bI-7" value="Aplicación de prototipo" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="303.65999999999997" y="20" width="220" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="_OaTzdXBvvJeqG0Sq9bI-8" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.mscae.general.video" vertex="1" parent="_OaTzdXBvvJeqG0Sq9bI-7">
+          <mxGeometry x="25.5" y="60" width="49" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="_OaTzdXBvvJeqG0Sq9bI-11" value="Estado del quirófano" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="_OaTzdXBvvJeqG0Sq9bI-7">
+          <mxGeometry x="124" y="40" width="80" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_OaTzdXBvvJeqG0Sq9bI-12" value="Video a procesar" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="_OaTzdXBvvJeqG0Sq9bI-7">
+          <mxGeometry x="20" y="30" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_OaTzdXBvvJeqG0Sq9bI-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="_OaTzdXBvvJeqG0Sq9bI-13" target="_OaTzdXBvvJeqG0Sq9bI-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_OaTzdXBvvJeqG0Sq9bI-13" value="" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Cognitive_Services.svg;" vertex="1" parent="1">
+          <mxGeometry x="312.34" y="200" width="83.33" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="_OaTzdXBvvJeqG0Sq9bI-14" value="Aplicación y modelo de visión por computadora" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="294" y="260" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_OaTzdXBvvJeqG0Sq9bI-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;" edge="1" parent="1" source="_OaTzdXBvvJeqG0Sq9bI-6" target="_OaTzdXBvvJeqG0Sq9bI-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_OaTzdXBvvJeqG0Sq9bI-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;" edge="1" parent="1" source="_OaTzdXBvvJeqG0Sq9bI-8" target="_OaTzdXBvvJeqG0Sq9bI-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="JKbsQURaDr2a_oLHjApa" name="Ciclo de vida del quirófano">
+    <mxGraphModel dx="1006" dy="557" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="AU9YK0k_ocg62SQWi8QE-1" value="Quirófano listo" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="120" y="170" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AU9YK0k_ocg62SQWi8QE-2" value="Entrada del&lt;div&gt;&amp;nbsp;paciente&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="304" y="80" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AU9YK0k_ocg62SQWi8QE-3" value="Cirugía en curso" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="500" y="170" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AU9YK0k_ocg62SQWi8QE-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="AU9YK0k_ocg62SQWi8QE-4" target="AU9YK0k_ocg62SQWi8QE-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AU9YK0k_ocg62SQWi8QE-4" value="Salida del&lt;div&gt;&amp;nbsp;paciente&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="390" y="290" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AU9YK0k_ocg62SQWi8QE-5" value="Limpieza del quirófano" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="230" y="290" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AU9YK0k_ocg62SQWi8QE-8" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="AU9YK0k_ocg62SQWi8QE-2" target="AU9YK0k_ocg62SQWi8QE-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="104" as="sourcePoint" />
+            <mxPoint x="544" y="80" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="560" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AU9YK0k_ocg62SQWi8QE-9" value="" style="curved=1;endArrow=classic;html=1;rounded=0;strokeWidth=2;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="AU9YK0k_ocg62SQWi8QE-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="211" y="54" as="sourcePoint" />
+            <mxPoint x="300" y="110" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="170" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AU9YK0k_ocg62SQWi8QE-10" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;exitX=0.582;exitY=1.017;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="AU9YK0k_ocg62SQWi8QE-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="595" y="250" as="sourcePoint" />
+            <mxPoint x="500" y="320" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="590" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AU9YK0k_ocg62SQWi8QE-11" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="AU9YK0k_ocg62SQWi8QE-5" target="AU9YK0k_ocg62SQWi8QE-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="130" y="330" as="sourcePoint" />
+            <mxPoint x="225" y="260" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="150" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

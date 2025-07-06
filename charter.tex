@@ -5,10 +5,10 @@
 
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Título del proyecto} 
+\titulo{Reconocimiento de eventos quirúrgicos a través de visión por computadora} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
-\posgrado{Carrera de Especialización en Sistemas Embebidos} 
+\posgrado{Maestría en comptación de borde} 
 %\posgrado{Carrera de Especialización en Internet de las Cosas} 
 %\posgrado{Carrera de Especialización en Inteligencia Artificial}
 %\posgrado{Maestría en Sistemas Embebidos} 
@@ -16,21 +16,21 @@
 
 % Tu nombre, se puede usar el cualquier lugar del documento con el comando \authorname
 % IMPORTANTE: no omitir titulaciones ni tildación en los nombres, también se recomienda escribir los nombres completos (tal cual los tienen en su documento)
-\autor{Título y Nombre del autor}
+\autor{Esp. Ing. Marín A. Brocca}
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Título y Nombre del director}
-\pertenenciaDirector{pertenencia} 
-\codirector{} % para que aparezca en la portada se debe descomentar la opción codirector en los parámetros de documentclass
-\pertenenciaCoDirector{FIUBA}
+\director{Dr. Ing. Axel Soto}
+\pertenenciaDirector{CONICET} 
+\codirector{Dr. Ing. Dipl. Inf. Felix Sebastian Leo Thomsen} % para que aparezca en la portada se debe descomentar la opción codirector en los parámetros de documentclass
+\pertenenciaCoDirector{Universidad Nacional del Sur}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
-\cliente{Nombre del cliente}
-\empresaCliente{Empresa del cliente}
+\cliente{Luciano Torun}
+\empresaCliente{Wúru}
  
-\fechaINICIO{30 de abril de 2023}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlan{18 de junio de 2023} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{15 de mayo de 2024}	%Fecha de defensa pública del trabajo final
+\fechaINICIO{24 de junio de 2025}		%Fecha de inicio de la cursada de GdP \fechaInicioName
+\fechaFINALPlan{19 de agosto de 2025} 	%Fecha de final de cursada de GdP
+\fechaFINALTrabajo{30 de abril de 2026}	%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -59,7 +59,7 @@
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
-%1      & Se completa hasta el punto 5 inclusive                & {día} de {mes} de 202X \\ \hline
+1      & Se completa hasta el punto 5 inclusive                & 6 de julio de 2025\\ \hline
 %2      & Se completa hasta el punto 9 inclusive
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
@@ -85,7 +85,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en \textcolor{red}{la implementación de un prototipo de un sistema de control de temperatura de una caldera industrial}. El trabajo tendrá un presupuesto preliminar estimado de \textcolor{red}{600} horas y un costo estimado de \textcolor{red}{\$ XXX}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la creación de un modelo de una aplicación basada en inteligencia artificial para la identificación de eventos en quirófanos por medio de visión por computadora. El trabajo tendrá un presupuesto preliminar estimado de 700 horas y un costo estimado de \$ 4000, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -100,58 +100,35 @@ Se adjunta a esta acta la planificación inicial.
 \end{tabular}
 \end{table}
 
-
-
-
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-\begin{consigna}{red} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-El objetivo es que el lector, en una o dos páginas, exponga de qué se trata el proyecto y cuáles son sus desafíos, cuál es la motivación para realizarlo y su importancia.
+El presente proyecto se realiza en base al marco de vinculación con  Wuru, empresa fundada en 2019 por un equipo con profunda experiencia en entornos hospitalarios que emergió con la visión de optimizar la eficiencia operativa en instituciones de salud. El foco de este equipo es la optimización continua de procesos mediante la capitalización del vasto volumen de datos generados por sistemas de registros médicos electrónicos (EMR) y equipos radiológicos. En función de esto, la empresa identificó un desafío crítico en el área quirúrgica: el alto costo asociado al tiempo ocioso de los quirófanos y la falta de precisión en el registro de eventos clave,  que impactan directamente en la planificación y utilización de recursos.
 
-Se debe introducir el contexto del proyecto, el estado del arte en la temática, describir la propuesta de valor, cuál es el problema que atiende y cuál es la solución que se propone. Se debe dar una descripción funcional de la solución que incluya un diagrama en bloques.
-
-Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
-
-\begin{itemize}
-	\item ¿Cuál es el contexto del proyecto, es un emprendimiento personal, un proyecto para una empresa, es parte del programa de vinculación con empresas del posgrado?
-	\item ¿Existen o aplican condiciones especiales al proyecto, financiamiento de algún programa público o privado, acuerdos de confidencialidad, acuerdos sobre la propiedad intelectual de los entregables u otros?
-	\item ¿Cómo se compara la solución propuesta con el estado del arte en el campo de aplicación? ¿En qué aspectos destaca?
-	\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
-	\item ¿En qué estado del ciclo de vida está la solución que se propone?
-	\item ¿Cuáles son las características del cliente (el adoptante de los entregables del proyecto) qué valora, qué necesita?
-	\item ¿Por dónde pasa la innovación?
-\end{itemize}
-
-La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema} y descripción funcional de la solución propuesta.
-
-Las figuras se deben mencionar en el texto ANTES de que aparezcan con una frase como la siguiente: ``En la figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''.  La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
+El problema central que se busca abordar radica en la naturaleza manual y propensa a errores de la documentación de eventos en las salas de operaciones. Actualmente, y dependiendo del sistema EMR empleado, tareas como la de inicio y fin de una cirugía, la entrada o salida de pacientes o la limpieza de la sala dependen de la intervención manual del personal de enfermería. Esta dependencia no solo introduce inconsistencias y omisiones en los datos, sino que también genera una carga administrativa adicional y puede llevar a la duplicación de esfuerzos en diferentes sistemas. La consecuencia directa es el desaprovechamiento de los recursos del quirófano, un aumento en los costos operativos y una visibilidad limitada sobre el flujo real de trabajo. En la figura \ref{fig:lifecycle} se ejemplifica el ciclo de uso de un quirófano.
 
 \begin{figure}[htpb]
-\centering 
-\includegraphics[width=.65\textwidth]{./Figuras/diagBloques.png}
-\caption{Diagrama en bloques del sistema.}
-\label{fig:diagBloques}
+	\centering 
+	\includegraphics[width=.6\textwidth]{./Figuras/lifecycle.png}
+	\caption{Ciclo de preparación y uso del quirófano.}
+	\label{fig:lifecycle}
 \end{figure}
 
-\vspace{25px}
+En el mercado de soluciones hospitalarias existen diferentes alternativas que emplean en mayor o menor medida sistemas de grabaciones de video y voz con diferentes propósitos, como puede ser el monitoreo de eventos intraoperatorios, por ejemplo sangrado, conteo automático del instrumental empleado o capacitaciones a nuevo personal. Los principales inconvenientes de estas aplicaciones son su naturaleza cerrada, es decir, su limitada capacidad para ser integrada a sistemas locales, y el riesgo de dependencia del proveedor (\textit{vendor lock-in}).
 
-El tamaño del texto en TODAS las figuras debe ser adecuado \textbf{para que NO pase lo que ocurre en la figura \ref{fig:diagBloques}}, donde el lector debe esforzarse para poder leer el texto. 
+Para resolver este problema se deben sortear los desafíos que incluyen la gestión del gran volumen de datos de video, la complejidad del etiquetado de eventos temporales (considerando variaciones de iluminación y perspectivas), el desarrollo de un modelo robusto capaz de generalizar a diversas condiciones de quirófano, y la construcción de una aplicación de demostración que refleje fielmente el potencial de la solución.
 
-Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama. Se recomienda evitar colores primarios (como rojo, verde o cyan) y usar la gama de colores pastel.
+En la figura \ref{fig:Esquema} se presenta el diagrama en bloques del sistema propuesto. Se observa que la solución se fundamenta en la ingesta de video provenientes de cámaras de vigilancia instaladas en las salas de operaciones. Estos videos son procesados por un modelo de visión por computadora entrenado para identificar eventos específicos como la presencia de personal de limpieza, el desarrollo de una operación, la entrada o salida de pacientes, genera una salida estructurada que refleja el estado actual del quirófano. Dicha información es persistida en una base de datos operacional, la cual alimenta una aplicación de demostración  que visualiza el estado en tiempo real, ofreciendo una interfaz intuitiva para la monitorización y la toma de decisiones operativas.
 
-\end{consigna} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
+\begin{figure}[htpb]
+	\centering 
+	\includegraphics[width=.6\textwidth]{./Figuras/CEIA-GDP-Esquema.png}
+	\caption{Diagrama en bloques del sistema a desarrollar.}
+	\label{fig:Esquema}
+\end{figure}
 
 \section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
-
-\begin{consigna}{red} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-\textbf{Nota importante:} borrar esto y todas las consignas en color rojo antes de entregar este documento). Esto se hace eliminando el par de comandos que forman el bloque consigna, \verb!\begin{consigna}{red}! y \verb!\end{consigna}{red}! del código. 
- 
-Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos. Si se considera que una persona cumple dos o más roles, entonces \textbf{solo dejarla en el rol más importante}. 
-
-Por ejemplo, si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente. Si una persona es el Responsable, \textbf{no debe ser colocado también como miembro del equipo}.
-
 
 \begin{table}[ht]
 %\caption{Identificación de los interesados}
@@ -160,161 +137,189 @@ Por ejemplo, si una persona es Cliente pero también colabora u orienta, dejarla
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   &                   &              	&        	\\ \hline
-Cliente       & \clientename      &\empclientename	&        	\\ \hline
-Impulsor      &                   &              	&        	\\ \hline
+Auspiciante       & \clientename      &\empclientename	&        -	\\ \hline
+Cliente       & \clientename      &\empclientename	&        -	\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores &                   &              	&        	\\ \hline
+Colaborador       & Javier Roberts      &\empclientename	&        -	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director del Trabajo Final \\ \hline
-Equipo        & miembro1 \newline 
-				miembro2          &              	&        	\\ \hline
-Opositores    &                   &              	&        	\\ \hline
-Usuario final &                   &              	&        	\\ \hline
+Opositores    &    Aún no conocidos               &        -      	&        -	\\ \hline
+Usuario final & Usuarios de la plataforma de gestión hospitalaria Wúru. & - & - \\ \hline
+
 \end{tabularx}
 \end{table}
-
-El Director suele ser uno de los orientadores.
-
-No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo ``-''.
-
-No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
-
-Es deseable listar a continuación las principales características de cada interesado.
- 
-Por ejemplo:
-\begin{itemize}
-	\item Orientador: la Dra. Ing. María Gómez es experta en la temática y va a ayudar con la definición de los requerimientos y el desarrollo del firmware del embebido.
-	\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
-	\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
-\end{itemize}
-
-\end{consigna} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
 
 
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-\begin{consigna}{red} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
+Desarrollar un prototipo de aplicación que, por medio de técnicas de visión por computadora, permita la automatización de los procesos asociados a la gestión de quirófanos.
 
-¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
 
-Se recomienda que sea solo un párrafo que continúe con la idea de la frase ``el propósito de este proyecto es...'' (omitir la frase, ya que está en el título de la sección).
-\end{consigna}
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
 
-\begin{consigna}{red}
-¿Qué se incluye y que no se incluye en este proyecto?
-
-Se refiere al trabajo que se va a hacer para entregar el producto o resultado especificado. 
-
-Explicitar todo lo quede comprendido dentro del alcance del proyecto. Por ejemplo:
-
 El proyecto incluye:
 \begin{itemize}
-	\item Ítem 1.
-	\item Ítem 2.
-		\begin{itemize}
-		\item Subítem 1.
-		\item Subítem 2.
-		\item ...
-		\end{itemize}
-	\item ...
+	\item Relevamientos detallado de los requerimientos del cliente.
+	\item Armado del dataset a partir de los datos crudos entregados por el cliente.
+	\item Planteo de la tarea de visión por computadora a ser utilizada. 
+	\item Selección, entrenamiento y ensayos con modelos de inteligencia artificial.
+	\item Procesamiento del dataset.
+	\item Desarrollo de un prototipo de aplicación de tres capas.
+	\item Pruebas funcionales y de integración.
+	\item Documentación y entrega de recomendaciones al cliente.
+	\item Escritura de la memoria del trabajo final y defensa ante jurados.
 	
 \end{itemize}
 
-Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
+Los siguientes elementos quedan fuera del alcance:
+\begin{itemize}
+	\item Implementación del sistema en producción.
+	\item Integración del modelo con las aplicaciones del cliente.
+	\item Integración de la aplicación con los sistemas de cámaras en los quirófanos. 
 
-\end{consigna} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
+\end{itemize}
+
 
 
 \section{5. Supuestos del proyecto}
 \label{sec:supuestos}
 
-\begin{consigna}{red} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-``Para el desarrollo del presente proyecto se supone que: ...''
+Para el desarrollo del presente proyecto se supone que: 
 
 \begin{itemize}
-	\item Supuesto 1.
-	\item Supuesto 2.
-	\item ...
+	\item Se dispondrá con la suficiente cantidad de videos para el correcto procesamiento e identificación de eventos..
+	\item La calidad de los videos será la adecuada para su procesamiento.
+	\item En caso de ser necesario, se contará con la ayuda de recursos por parte del cliente para el procesamiento y entrenamiento del modelo.
+	\item Se dispondrá de materiales y/o de soporte académico para completar el proyecto.
+	\item Se contará con el apoyo necesario del cliente cuando se requieran conocimientos específicos relacionados con la operatoria del quirófano.
 \end{itemize}
 
-Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
-
-\end{consigna} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
 
 \section{6. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{red} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-Los requerimientos deben enumerarse y de ser posible estar agrupados por afinidad, por ejemplo:
-
 \begin{enumerate}
 	\item Requerimientos funcionales:
 		\begin{enumerate}
-			\item El sistema debe...
-			\item Tal componente debe...
-			\item El usuario debe poder...
+			\item El modelo deberá reconocer 6 posibles estados del quirófano:
+					\begin{enumerate}
+						\item Quirófano vacío.
+						\item Entrada de paciente.
+						\item Operación en curso.
+						\item Salida de paciente.
+						\item Quirófano en limpieza.
+						\item Otro
+					\end{enumerate}
+			\item El estado registrado deberá ser guardado en una base de datos
+			\item El usuario debe poder ejecutar el modelo sobre un video.
+			\item La solución propuesta deberá indicar el grado de confianza de la detección y el error
+			esperado en las mediciones.
 		\end{enumerate}
-	\item Requerimientos de documentación:
+	\item Requerimientos asociados a los datos:
 		\begin{enumerate}
-			\item Requerimiento 1.
-			\item Requerimiento 2 (prioridad menor)
+			\item Se deberá resguardar la privacidad de los datos del hospital y de los pacientes.
+			\item Por motivos de confidencialidad el almacenamiento de código se realizará en repositorios de acceso restringido.
 		\end{enumerate}
-	\item Requerimiento de testing...
-	\item Requerimientos de la interfaz...
-	\item Requerimientos interoperabilidad...
-	\item etc...
+	\item Requerimiento de documentación
+		\begin{enumerate}
+		  \item Se desarrollará un informe de avance y una memoria final del proyecto.
+		  \item Se entregarán recomendaciones para que el cliente pueda mejorar los procesos
+		  de captura y recolección de datos.
+		  \item El código se almacenará en la herramienta GitHub.
+	    \end{enumerate}
+	\item Requerimientos de la interfaz
+		\begin{enumerate}
+		\item La interfaz de usuario será simple y clara y permitirá agregar un video para su procesamiento.
+		\item El estado del quirófano será visible desde la interfaz de usario.
+		\end{enumerate}	
 \end{enumerate}
 
 Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
 
 Indicar claramente cuál es la prioridad entre los distintos requerimientos y si hay requerimientos opcionales. 
 
-\textbf{¡¡¡No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!}
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-	\item Ser breve y conciso (nadie lee cosas largas). 
-	\item Ser específico: no dejar lugar a confusiones.
-	\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
-
-\end{consigna} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
 
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-\begin{consigna}{red}
-Descripción: en esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
+Las historias de usuarios se ponderan en base a las siguientes categorías:
+\begin{itemize}
+	\item Cantidad de trabajo a realizar para completar la tarea.
+	\item Complejidad del trabajo requerido.
+	\item Incertidumbre asociada a la actividad, es decir el riesgo de no poder completarla.
+\end{itemize}
 
-Se debe indicar explícitamente el criterio para calcular los \textit{story points} de cada historia.
+Para cada clase, los valores pueden ser 1 (bajo), 3 (medio) y 5 (alto). A las historias de usuario se les asigna un peso por cada categoría y luego estos valores se suman y se reemplazan por un número de la serie de Fibonacci (igual al resultado de la adición o inmediato superior).
 
-El formato propuesto es: 
-\begin{enumerate}
-\item ``Como [rol] quiero [tal cosa] para [tal otra cosa]."
+En este proyecto se identifican los siguientes roles de usuarios:
 
-\textit{Story points}: 8 (complejidad: 3, dificultad: 2, incertidumbre: 3)
-\end{enumerate}
-\end{consigna}
+\begin{itemize}
+	\item Usuario administrativo: personal del hospital responsable de administrar el uso del quirófano. 
+	\item Administrador del sistema: responsable de la ejecución y monitoreo de los modelos y sistemas.
+	\item Jefe de tecnología de Wúru: responsable por el correcto funcionamiento de la aplicación y su integración con los demás sistemas hospitalarios.
+\end{itemize}
+
+A continuación se detallan las historias de usuarios:
+
+\begin{itemize}
+	\item Como usuario administrativo quiero poder identificar el estado del o de los quirófanos en cualquier momento. 
+	\begin{itemize}
+		\item Cantidad de trabajo a realizar: 5
+		\item Complejidad del trabajo: 5
+		\item Incertidumbre/riesgo: 3
+		\item Ponderación final: 13 story points
+	\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+	\item Como administrador del sistema debo de poder monitorear la efectividad del modelo como así también la performance del sistema.
+	\begin{itemize}
+		\item Cantidad de trabajo a realizar: 5
+		\item Complejidad del trabajo: 5
+		\item Incertidumbre/riesgo: 5
+		\item Ponderación final: 21 story points
+	\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+	\item Como jefe de tecnología de Wúru quiero saber qué técnicas y/o modelos
+	de visión por computadora se ensayaron, para realizar a futuro la implementación en
+	producción.
+	\begin{itemize}
+		\item Cantidad de trabajo a realizar: 3
+		\item Complejidad del trabajo: 2
+		\item Incertidumbre/riesgo: 1
+		\item Ponderación final: 8 story points
+	\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+	\item Como administrador del sistema debo de poder monitorear la efectividad del modelo como así también la performance del sistema.
+	\begin{itemize}
+		\item Cantidad de trabajo a realizar: 5
+		\item Complejidad del trabajo: 5
+		\item Incertidumbre/riesgo: 5
+		\item Ponderación final: 21 story points
+	\end{itemize}
+\end{itemize}
 
 \section{8. Entregables principales del proyecto}
 \label{sec:entregables}
 
-\begin{consigna}{red}
-Los entregables del proyecto son (ejemplo):
+
+Los entregables del proyecto son:
 
 \begin{itemize}
-	\item Manual de usuario.
-	\item Diagrama de circuitos esquemáticos.
-	\item Código fuente del firmware.
-	\item Diagrama de instalación.
+	\item Informe para el cliente con resumen de ensayos, modelos y/o técnicas utilizadas, resultados	y recomendaciones para mejorar el proceso de captura de datos en el futuro.
+	\item Código fuente.
+	\item Plan del proyecto.
+	\item Informe de avance.
 	\item Memoria del trabajo final.
-	\item etc...
+
 \end{itemize}
-\end{consigna}
+
 
 \section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
