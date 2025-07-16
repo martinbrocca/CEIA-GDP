@@ -21,7 +21,7 @@
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
 \director{Dr. Ing. Axel Soto}
 \pertenenciaDirector{UNS-CONICET} 
-\codirector{Dr. Ing. Dipl. Inf. Felix Sebastian Leo Thomsen} % para que aparezca en la portada se debe descomentar la opción codirector en los parámetros de documentclass
+\codirector{Dr. Ing. Felix Sebastian Leo Thomsen} % para que aparezca en la portada se debe descomentar la opción codirector en los parámetros de documentclass
 \pertenenciaCoDirector{UNS}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
@@ -30,7 +30,7 @@
  
 \fechaINICIO{24 de junio de 2025}		%Fecha de inicio de la cursada de GdP \fechaInicioName
 \fechaFINALPlan{19 de agosto de 2025} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{30 de abril de 2026}	%Fecha de defensa pública del trabajo final
+\fechaFINALTrabajo{abril de 2026}	%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -60,7 +60,7 @@
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
 1      & Se completa hasta el punto 9 inclusive                & 7 de julio de 2025\\ \hline
-%2      & Se completa hasta el punto 9 inclusive
+2      & Se completa hasta el punto 10 inclusive	& 15 de julio de 2025 \\ \hline
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
 %		  Así                                                    & {día} de {mes} de 202X \\ \hline
@@ -85,7 +85,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la creación de un modelo de una aplicación basada en inteligencia artificial para la identificación de eventos en quirófanos por medio de visión por computadora. El trabajo tendrá un presupuesto preliminar estimado de 700 horas y un costo estimado de \$ 4000, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la creación de un modelo de una aplicación basada en inteligencia artificial para la identificación de eventos en quirófanos por medio de visión por computadora. El trabajo tendrá un presupuesto preliminar estimado de 700 horas y un costo estimado de \$ 4000, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública en el mes de  \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -166,7 +166,8 @@ El proyecto incluye:
 	\item Planteo de la tarea de visión por computadora a ser utilizada. 
 	\item Selección, entrenamiento y ensayos con modelos de inteligencia artificial.
 	\item Procesamiento del dataset.
-	\item Desarrollo de un prototipo de aplicación de tres capas.
+	\item Desarrollo de un prototipo de aplicación de tres capas (backend, frontend y base de datos).
+	\item Desarrollo de APIs para la integración entre la aplicación y el modelo.
 	\item Ejecución de pruebas funcionales y de integración.
 	\item Documentación y entrega de recomendaciones al cliente.
 	\item Escritura de la memoria del trabajo final y defensa ante jurados.
@@ -263,7 +264,7 @@ En este proyecto se identifican los siguientes roles de usuarios:
 A continuación se detallan las historias de usuarios:
 
 \begin{itemize}
-	\item Como usuario administrativo quiero poder identificar el estado del o de los quirófanos en cualquier momento. 
+	\item Como usuario administrativo, quiero poder identificar el estado del o de los quirófanos en cualquier momento para la correcta programación de cirugías . 
 	\begin{itemize}
 		\item Cantidad de trabajo a realizar: 5
 		\item Complejidad del trabajo: 5
@@ -273,7 +274,7 @@ A continuación se detallan las historias de usuarios:
 \end{itemize}
 
 \begin{itemize}
-	\item Como administrador del sistema debo poder monitorear la efectividad del modelo como así también la \textit{performance} del sistema.
+	\item Como administrador del sistema, quiero poder monitorear la efectividad del modelo como así también la \textit{performance} del sistema para evitar errores en la detección de eventos y la correcta asignación de estados al quirófano
 	\begin{itemize}
 		\item Cantidad de trabajo a realizar: 5
 		\item Complejidad del trabajo: 5
@@ -333,7 +334,7 @@ Los entregables del proyecto son:
 	
 	\item Preparación de datos y etiquetado. (190 h)
 	\begin{enumerate}
-		\item Análisis de videos, definición de eventos, preparación del dataset. (40h)
+		\item Análisis de videos, definición de eventos, preparación del dataset. (40 h)
 		\item Definición del esquema de anotación (etiquetado). (30 h)
 		\item Extracción de \textit{frames} y sincronización de \textit{timestamps}. (40 h)
 		\item Etiquetado del quirófano 1. (40 h)
@@ -359,8 +360,10 @@ Los entregables del proyecto son:
 	
 	\item Elaboración de documentos. (144 h)
 	\begin{enumerate}
-		\item Elaboración del informe de avance del proyecto. (20 h)
-		\item Confección de la memoria del trabajo final. (60 h)
+		\item Elaboración del informe de avance del proyecto. (5 h)
+		\item Elaboración del video de demostración de la solución. (15 h)
+		\item Confección de la memoria del trabajo final (TTF A). (20 h)
+		\item Confección de la memoria del trabajo final (TTF B). (40 h)
 		\item Aplicación de correcciones y ajustes en la memoria. (30 h)
 		\item Documentación de código, herramientas y experimentos. (20 h)
 		\item Creación del documento de recomendaciones para el cliente. (14 h)
@@ -379,26 +382,19 @@ Cantidad total de horas: 700.
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
-
-\begin{consigna}{red}
-Armar el AoN a partir del WBS definido en la etapa anterior.
-
-Una herramienta simple para desarrollar los diagramas es el Draw.io (\url{https://app.diagrams.net/}).
-\href{https://app.diagrams.net}{Draw.io}
-
+En la figura 3 se aprecia el diagrama de Activity on Node para este proyecto. Las tareas se
+representan por medio de bloques interconectados con flechas para mostrar la dependencia que
+hay entre ellas. El tiempo para cada actividad está expresado en horas y la duración del camino
+crítico (identificado con color rojo) es de 501 h.
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.8\textwidth]{./Figuras/AoN.png}
+\includegraphics[width=1\textwidth]{./Figuras/CEIA-GDP-Esquema-AoN.table.png}
 \caption{Diagrama de \textit{Activity on Node}.}
 \label{fig:AoN}
 \end{figure}
 
-Indicar claramente en qué unidades están expresados los tiempos.
-De ser necesario indicar los caminos semi críticos y analizar sus tiempos mediante un cuadro.
-Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color.
 
-\end{consigna}
 
 \section{11. Diagrama de Gantt}
 \label{sec:gantt}
