@@ -807,26 +807,72 @@ Riesgo 4: se incluyó un tiempo de contingencia en la planificación de las tare
 \section{14. Gestión de la calidad}
 \label{sec:calidad}
 
-\begin{consigna}{red}
-Elija al menos diez requerimientos que a su criterio sean los más importantes/críticos/que aportan más valor y para cada uno de ellos indique las acciones de verificación y validación que permitan asegurar su cumplimiento.
-
-\begin{itemize} 
-\item Req \#1: copiar acá el requerimiento con su correspondiente número.
+A continuación se describen las pruebas de verificación y validación destinadas a comprobar el cumplimiento de los requerimientos del proyecto.
 
 \begin{itemize}
-	\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar.
-	\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar. 
+	
+	\item Req \#1.1: el modelo deberán reconocer 6 posibles estados del quirófano: Quirófano vacío, Entrada de paciente, Operación en curso, Salida de paciente, Quirófano en limpieza, etc.
+	\begin{itemize}
+		\item Verificación: se ejecutará el modelo con un conjunto de datos de prueba comprensivo de los posibles estados del quirófano. Se analizarán las predicciones del modelo para cada video, comparándolas con las etiquetas de manualmente definidas, y se calcularán métricas de rendimiento (precisión, \textit{recall}, \textit{F1-score}) para cada estado. Se revisará el código del modelo para asegurar la correcta implementación de los algoritmos de detección.
+		\item Validación: el cliente proporcionará un conjunto de videos nuevos (no usados en entrenamiento/prueba) de quirófanos reales. Se procesarán estos videos con la solución final y el cliente inspeccionará visualmente los resultados en la interfaz de usuario, confirmando que el modelo identifica correctamente los diferentes estados en escenarios operativos.
+	\end{itemize}
+	
+	\item Req \#1.2: el estado identificado deberá ser guardado en una base de datos.
+	\begin{itemize}
+		\item Verificación: se ejecutará el módulo de guardado de datos con estados simulados y se verificará directamente en la base de datos (mediante consultas SQL o herramientas de gestión de BD) que los datos se insertan correctamente con el formato y los campos esperados. Se revisará el esquema de la base de datos para asegurar que cumple con los requisitos de almacenamiento.
+		\item Validación: el cliente procesará algunos videos a demanda. Luego, se le mostrará cómo acceder a la base de datos (o a un reporte generado desde ella) para confirmar que los estados detectados por el modelo se registran y persisten correctamente.
+	\end{itemize}
+	
+	\item Req \#1.3: el usuario debe poder procesar videos a demanda.
+	\begin{itemize}
+		\item Verificación: se realizarán pruebas \textit{end-to-end} donde se carguen diferentes videos a través de la interfaz de usuario y se monitoree el la ejecución del procesamiento hasta la obtención de resultados. 
+		\item Validación: el cliente cargará y procesará varios videos de prueba a través de la interfaz de usuario, confirmando que la funcionalidad de procesamiento a demanda es intuitiva y funciona como se espera.
+	\end{itemize}
+	
+	\item Req \#1.4: la solución propuesta deberá indicar el grado de confianza de la detección del estado.
+	\begin{itemize}
+		\item Verificación: se ejecutará el modelo con un conjunto de videos de prueba y se inspeccionará la salida del modelo para confirmar que, además del estado detectado, se proporciona un valor numérico o una indicación del grado de confianza.
+		\item Validación: el cliente revisará los resultados de detección para varios videos, prestando atención al indicador de confianza. Se discutirá si la representación de la confianza es clara y útil para la toma de decisiones.
+	\end{itemize}
+	
+	\item Req \#2.1: se deberá resguardar la privacidad de los datos del hospital y de los pacientes.
+	\begin{itemize}
+		\item Verificación: se revisarán los protocolos de anonimización o seudonimización aplicados a los datos de video y cualquier metadato sensible. Se verificará que el acceso a los datos crudos está estrictamente controlado y que no se almacena información personal identificable sin consentimiento explícito. Se realizará una auditoría del flujo de datos para identificar posibles puntos de fuga.
+		\item Validación: el cliente (o un representante de seguridad de datos del hospital) revisará la política de manejo de datos y los procedimientos implementados, confirmando que cumplen con las normativas de privacidad aplicables y sus propias expectativas de confidencialidad.
+	\end{itemize}
+	
+	\item Req \#2.2: por motivos de confidencialidad el almacenamiento de código se realizará en repositorios de acceso restringido.
+	\begin{itemize}
+		\item Verificación: se inspeccionarán las configuraciones de seguridad del repositorio de código (GitHub privado) para confirmar que solo los miembros autorizados tienen acceso de lectura/escritura y que no es público. Se intentará acceder al repositorio desde una cuenta no autorizada para confirmar el bloqueo.
+		\item Validación: el cliente verificará que el repositorio de código es privado y que solo las personas designadas tienen acceso, confirmando que la confidencialidad del código fuente está asegurada.
+	\end{itemize}
+	
+	\item Req \#3.1: se desarrollará un informe de avance y una memoria final del proyecto.
+	\begin{itemize}
+		\item Verificación: se revisarán los borradores del informe de avance y la memoria final para asegurar que cumplen con la estructura, contenido, y requisitos de formato establecidos por la dirección del posgrado y el cliente. Se verificará la coherencia y completitud de la información.
+		\item Validación: el director del proyecto, el equipo docente, y los jurados (para la memoria final) revisarán los documentos y proporcionarán retroalimentación, aprobando su contenido y formato. 
+	\end{itemize}
+	
+	\item Req \#3.2: se entregarán recomendaciones para que el cliente pueda mejorar los procesos de captura y recolección de datos.
+	\begin{itemize}
+		\item Verificación: se revisará el documento de recomendaciones para asegurar que es claro, conciso, accionable y basado en los hallazgos del proyecto. Se verificará que las recomendaciones son relevantes para los procesos de captura y recolección de datos del cliente.
+		\item Validación: el cliente revisará el documento de recomendaciones y confirmará que las sugerencias son comprensibles, aplicables y valiosas para sus operaciones futuras.
+	\end{itemize}
+	
+	\item Req \#4.1: la interfaz de usuario será simple y clara y permitirá agregar un video para su procesamiento.
+	\begin{itemize}
+		\item Verificación: se realizarán pruebas de usabilidad internas para asegurar que la interfaz es intuitiva, los elementos están bien organizados y la función de carga de video es fácil de encontrar y usar. Se verificarán diferentes escenarios de carga (ej., formatos de archivo, tamaños).
+		\item Validación: el cliente interactuará con la interfaz de usuario para cargar y procesar videos, proporcionando retroalimentación sobre la simplicidad, claridad y facilidad de uso de la función de carga de videos.
+	\end{itemize}
+	
+	\item Req \#4.2: el estado del quirófano será visible desde la interfaz de usuario.
+	\begin{itemize}
+		\item Verificación: se ejecutarán pruebas con el sistema en funcionamiento, verificando que el estado detectado por el modelo se actualiza y muestra correctamente en la interfaz de usuario en tiempo real (o casi real) a medida que los videos son procesados. Se comprobará la legibilidad y visibilidad del estado.
+		\item Validación: el cliente observará la interfaz de usuario mientras se procesan videos, confirmando que el estado del quirófano se muestra de manera clara, precisa y útil para su monitoreo.
+	\end{itemize}
+	
 \end{itemize}
 
-\end{itemize}
-
-Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.  
-
-Las acciones de verificación suelen considerar al entregable como ``caja blanca'', es decir se conoce en profundidad su funcionamiento interno.  
-
-En cambio, las acciones de validación suelen considerar al entregable como ``caja negra'', es decir, que no se conocen los detalles de su funcionamiento interno.
-
-\end{consigna}
 
 \section{15. Procesos de cierre}    
 \label{sec:cierre}
