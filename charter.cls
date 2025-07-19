@@ -73,6 +73,7 @@
   	\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 	\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 	\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
 }
 
 
@@ -94,17 +95,16 @@
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{multirow}
 \usepackage{tabularx}
-\usepackage{pgfgantt} 
+
 \usepackage{graphicx}
 \usepackage[section]{placeins} % evita que los floats se pueden ubicar más allá de un \section{•}
 \usepackage[labelsep=period]{caption}
 \usepackage{longtable}
 \usepackage{etoolbox}
-
-%\usepackage{tikz}
-%\usetikzlibrary{arrows, arrows.meta, calc, positioning, quotes, shapes}
-%\usepackage{array}
-
+\usepackage{lmodern} % Recommended for better font rendering
+\usepackage{tikz}
+\usetikzlibrary{calendar} % <--- Essential for pgfcalendar
+\usepackage{pgfgantt} 
 
 % Adds space between caption and table
 \usepackage[tableposition=top]{caption}
@@ -147,6 +147,9 @@
 %enumerate style
 \renewcommand{\labelenumii}{\theenumii}
 \renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+
+
+
 
 \hypersetup{
   bookmarksnumbered = true, 

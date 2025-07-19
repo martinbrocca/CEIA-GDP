@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="27.2.0" pages="6">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="28.0.4" pages="7">
   <diagram name="Diagrama en bloques" id="viOvZfvEC3Nm27G9Bghc">
     <mxGraphModel dx="1006" dy="557" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1268,6 +1268,166 @@
         </mxCell>
         <mxCell id="V1HOrbLE7SEakhpV-VPs-3" value="&lt;span style=&quot;font-family: Arial;&quot; data-sheets-root=&quot;1&quot;&gt;5.7. Creación del documento de recomendaciones para el cliente.&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="88wTOjSZ-kpxXCtH49db-1">
           <mxGeometry y="210" width="771" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="kRS75yQpsq0qizwmT4Ya" name="Gantt-Table">
+    <mxGraphModel dx="2066" dy="1126" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-1" value="1. Configuración inicial y planificación." style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;" vertex="1" parent="1">
+          <mxGeometry x="100" y="220" width="771" height="150" as="geometry">
+            <mxRectangle x="29" y="-940" width="380" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-2" value="1.1 Definición del problema, requerimientos y categorías de eventos." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-1">
+          <mxGeometry y="30" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-3" value="1.2. Creación del repositorio en GitHub, y de los entornos UV y MLflow.1." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-1">
+          <mxGeometry y="60" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-4" value="1.3. Configuración de control de versiones con DVC/Git LFS." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-1">
+          <mxGeometry y="90" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-5" value="1.4. Selección y prueba inicial de una herramienta de etiquetado (CVAT/LabelStudio)." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-1">
+          <mxGeometry y="120" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-6" value="2. Preparación de datos y etiquetado." style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=20;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="100" y="370" width="771" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-7" value="&lt;span style=&quot;font-family: Arial;&quot; data-sheets-root=&quot;1&quot;&gt;2.1. Análisis de videos, definición de eventos, preparación del dataset.&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-6">
+          <mxGeometry y="30" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-8" value="&lt;span data-sheets-root=&quot;1&quot; style=&quot;font-family: Arial; font-style: normal;&quot;&gt;2.2. Definición del esquema de anotación (etiquetado).&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-6">
+          <mxGeometry y="60" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-9" value="&lt;span data-sheets-root=&quot;1&quot; style=&quot;font-family: Arial; font-style: normal;&quot;&gt;2.3. Extracción de frames y sincronización de timestamps.&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-6">
+          <mxGeometry y="90" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-10" value="&lt;span style=&quot;font-family: Arial;&quot; data-sheets-root=&quot;1&quot;&gt;2.4. Etiquetado del quirófano 1.&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-6">
+          <mxGeometry y="120" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-11" value="&lt;span style=&quot;font-family: Arial;&quot; data-sheets-root=&quot;1&quot;&gt;2.5. Etiquetado del quirófano 2.&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-6">
+          <mxGeometry y="150" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-12" value="3. Desarrollo del modelo." style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=20;align=left;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="100" y="550" width="771" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-13" value="&lt;span style=&quot;&quot; data-sheets-root=&quot;1&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;3.1. Realización de pruebas y selección del modelo base.&lt;/font&gt;&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-12">
+          <mxGeometry y="30" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-14" value="&lt;span data-sheets-root=&quot;1&quot; style=&quot;font-family: Arial; font-style: normal;&quot;&gt;3.2. Configuración y prueba de la herramienta MLflow para seguimiento de experimentos.&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-12">
+          <mxGeometry y="60" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-15" value="&lt;span data-sheets-root=&quot;1&quot; style=&quot;font-family: Arial; font-style: normal;&quot;&gt;3.3. Evaluación del modelo y ajuste de umbrales.&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-12">
+          <mxGeometry y="90" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-16" value="&lt;span style=&quot;font-family: Arial;&quot; data-sheets-root=&quot;1&quot;&gt;3.4. Evaluación final y métricas por estado.&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-12">
+          <mxGeometry y="120" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-17" value="4. Inferencia e integración." style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=20;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="100" y="700" width="771" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-18" value="&lt;span style=&quot;font-family: Arial;&quot; data-sheets-root=&quot;1&quot;&gt;4.1. Desarrollo de la aplicación prototipo.&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-17">
+          <mxGeometry y="30" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-19" value="&lt;span data-sheets-root=&quot;1&quot; style=&quot;font-family: Arial; font-style: normal;&quot;&gt;4.2. Diseño del esquema de base de datos (SQLite/PostgreSQL).&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-17">
+          <mxGeometry y="60" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-20" value="&lt;span data-sheets-root=&quot;1&quot; style=&quot;font-family: Arial; font-style: normal;&quot;&gt;4.3. Empaquetamiento del modelo y sus APIs en un contenedor Docker.&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-17">
+          <mxGeometry y="90" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-21" value="&lt;span style=&quot;font-family: Arial;&quot; data-sheets-root=&quot;1&quot;&gt;4.4. Realización de pruebas end-to-end.&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-17">
+          <mxGeometry y="120" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-22" value="6. Presentación del trabajo." style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=20;align=left;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1090" width="771" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-23" value="&lt;span style=&quot;font-family: Arial;&quot; data-sheets-root=&quot;1&quot;&gt;6.1. Preparación de la presentación final y defensa pública del trabajo.&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-22">
+          <mxGeometry y="30" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-24" value="5. Elaboración de documentos." style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=20;align=left;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="100" y="850" width="771" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-25" value="&lt;span style=&quot;font-family: Arial;&quot; data-sheets-root=&quot;1&quot;&gt;5.1. Elaboración del informe de avance del proyecto.&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-24">
+          <mxGeometry y="30" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-26" value="&lt;span data-sheets-root=&quot;1&quot; style=&quot;font-family: Arial; font-style: normal;&quot;&gt;5.2. Elaboración del video de demostración de la solución.&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-24">
+          <mxGeometry y="60" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-27" value="&lt;span data-sheets-root=&quot;1&quot; style=&quot;font-family: Arial; font-style: normal;&quot;&gt;5.3. Confección de la memoria del trabajo final (TTF A).&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-24">
+          <mxGeometry y="90" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-28" value="&lt;span style=&quot;font-family: Arial;&quot; data-sheets-root=&quot;1&quot;&gt;5.4. Confección de la memoria del trabajo final (TTF B).&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-24">
+          <mxGeometry y="120" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-29" value="&lt;span style=&quot;font-family: Arial;&quot; data-sheets-root=&quot;1&quot;&gt;5.5. Aplicación de correcciones y ajustes en la memoria.&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-24">
+          <mxGeometry y="150" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-30" value="&lt;span style=&quot;font-family: Arial;&quot; data-sheets-root=&quot;1&quot;&gt;5.6. Documentación de código, herramientas y experimentos.&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-24">
+          <mxGeometry y="180" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-31" value="&lt;span style=&quot;font-family: Arial;&quot; data-sheets-root=&quot;1&quot;&gt;5.7. Creación del documento de recomendaciones para el cliente.&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-24">
+          <mxGeometry y="210" width="771" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-32" value="Table" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;strokeColor=default;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="930" y="220" width="180" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-33" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-32">
+          <mxGeometry y="30" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-34" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-33">
+          <mxGeometry width="60" height="40" as="geometry">
+            <mxRectangle width="60" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-35" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-33">
+          <mxGeometry x="60" width="60" height="40" as="geometry">
+            <mxRectangle width="60" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-36" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-33">
+          <mxGeometry x="120" width="60" height="40" as="geometry">
+            <mxRectangle width="60" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-37" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-32">
+          <mxGeometry y="70" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-38" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-37">
+          <mxGeometry width="60" height="40" as="geometry">
+            <mxRectangle width="60" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-39" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-37">
+          <mxGeometry x="60" width="60" height="40" as="geometry">
+            <mxRectangle width="60" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-40" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-37">
+          <mxGeometry x="120" width="60" height="40" as="geometry">
+            <mxRectangle width="60" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-41" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-32">
+          <mxGeometry y="110" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-42" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-41">
+          <mxGeometry width="60" height="40" as="geometry">
+            <mxRectangle width="60" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-43" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-41">
+          <mxGeometry x="60" width="60" height="40" as="geometry">
+            <mxRectangle width="60" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D8Z31Fl-_7NVC1Bk1O5Q-44" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" vertex="1" parent="D8Z31Fl-_7NVC1Bk1O5Q-41">
+          <mxGeometry x="120" width="60" height="40" as="geometry">
+            <mxRectangle width="60" height="40" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>

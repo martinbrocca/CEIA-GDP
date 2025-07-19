@@ -47,6 +47,7 @@
 \pagebreak
 
 
+
 \section*{Registros de cambios}
 \label{sec:registro}
 
@@ -142,6 +143,7 @@ Cliente       & \clientename      &\empclientename	&        CEO	\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
 Colaborador       & Javier Roberts      &\empclientename	&        CTO	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director del Trabajo Final \\ \hline
+Orientador    & \cosupname	      & \pertesupname 	& Codirector del Trabajo Final \\ \hline
 Opositores    &    Aún no conocidos               &        -      	&        -	\\ \hline
 Usuario final & Usuarios de la plataforma de gestión hospitalaria Wúru. & - & - \\ \hline
 
@@ -284,7 +286,7 @@ A continuación se detallan las historias de usuarios:
 \end{itemize}
 
 \begin{itemize}
-	\item Como jefe de tecnología de Wúru quiero saber qué técnicas y/o modelos
+	\item Como jefe de tecnología de Wúru, quiero saber qué técnicas y/o modelos
 	de visión por computadora se ensayaron, para realizar a futuro la implementación en
 	producción.
 	\begin{itemize}
@@ -398,108 +400,269 @@ crítico (identificado con color rojo) es de 501 h.
 
 \section{11. Diagrama de Gantt}
 \label{sec:gantt}
+En base al las tareas identificadas y su orden de ejecución descripto en el diagrama \textit{Activity on Node}, se confeccionó el diagrama de Gantt del proyecto. Para una mejor lectura, en la tabla \ref{tab:wbs} se enumeran las actividades a ser realizadas, sus fechas de comienzo y finalización.  En la figura \ref{fig:gantt_chart} se observa el diagrama de Gantt propiamente dicho.
+%\begin{table}[ht]
+%	%\caption{Identificación de los interesados}
+%	%\label{tab:interesados}
+%	\begin{tabularx}{\linewidth}{@{}|l|X|X|l|@{}}
+%		\hline
+%		\rowcolor[HTML]{C0C0C0} 
+%		Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
+%		Auspiciante       & \clientename      &\empclientename	&        CEO	\\ \hline
+%		Cliente       & \clientename      &\empclientename	&        CEO	\\ \hline
+%		Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
+%		Colaborador       & Javier Roberts      &\empclientename	&        CTO	\\ \hline
+%		Orientador    & \supname	      & \pertesupname 	& Director del Trabajo Final \\ \hline
+%		Orientador    & \cosupname	      & \pertesupname 	& Codirector del Trabajo Final \\ \hline
+%		Opositores    &    Aún no conocidos               &        -      	&        -	\\ \hline
+%		Usuario final & Usuarios de la plataforma de gestión hospitalaria Wúru. & - & - \\ \hline
+%		
+%	\end{tabularx}
+%\end{table}
 
-\begin{consigna}{red}
-Existen muchos programas y recursos \textit{online} para hacer diagramas de Gantt, entre los cuales destacamos:
-
-\begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
-
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
-
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
-
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realizado con el paquete de \textit{pgfgantt}. 
-En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
-
-Las fechas pueden ser calculadas utilizando alguna de las herramientas antes citadas. Sin embargo, el siguiente ejemplo
-fue elaborado utilizando 
-\href{https://docs.google.com/spreadsheets/d/1fBz8NhSpc4tkkhz3KjJCbh1nR_ltDkfEcZi4tZXduqs}{esta hoja de cálculo}.
-
-Es importante destacar que el ancho del diagrama estará dado por la longitud del texto utilizado para las tareas 
-(Ejemplo: tarea 1, tarea 2, etcétera) y el valor \textit{x unit}. Para mejorar la apariencia del diagrama, es necesario
-ajustar este valor y, quizás, acortar los nombres de las tareas.
-
-\begin{figure}[htpb]
-  \begin{center}
-    \begin{ganttchart}[
-      time slot unit=day,
-      time slot format=isodate,
-      x unit=0.038cm,
-      y unit title=0.7cm,
-      y unit chart=0.6cm,
-      milestone/.append style={xscale=4}
-      ]{2021-03-05}{2021-12-16}
-      \gantttitlecalendar*{2021-03-05}{2021-12-16}{year} \\
-      \gantttitlecalendar*{2021-03-05}{2021-12-16}{month} \\
-      \ganttgroup{Duración Total}{2021-03-05}{2021-12-16} \\
-      %%%%%%%%%%%%%%%%%Organización
-      \ganttgroup{Organización}{2021-03-05}{2021-04-16} \\
-      \ganttbar{Planificación del proyecto}{2021-03-05}{2021-04-15} \\
-      %%%%%%%%%%%%%%%%%Ejecución
-      \ganttgroup{Ejecución}{2021-04-16}{2021-10-21} \\
-      \ganttbar{Tarea 1}{2021-04-16}{2021-04-29} \\
-      \ganttbar{Tarea 2}{2021-04-30}{2021-05-13} \\
-      \ganttbar{Tarea 3}{2021-05-14}{2021-05-27} \\
-      \ganttbar{Tarea 4}{2021-05-28}{2021-07-12} \\
-      \ganttbar{Tarea 5}{2021-07-13}{2021-08-09} \\
-      \ganttbar{Tarea 6}{2021-08-10}{2021-09-23} \\
-      \ganttbar{Tarea 7}{2021-09-24}{2021-09-30} \\
-      \ganttbar{Tarea 8}{2021-10-01}{2021-10-14} \\
-      \ganttbar{Tarea 9}{2021-10-15}{2021-10-21} \\
-      % %%%%%%%%%%%%%%%%%Finalización
-      \ganttgroup{Finalización}{2021-10-22}{2021-12-16} \\
-      \ganttbar{Memoria v1}{2021-10-22}{2021-11-04} \\
-      \ganttbar{Memoria v2}{2021-11-05}{2021-11-18} \\
-      \ganttbar{Memoria final}{2021-11-19}{2021-12-02} \\
-      % La fecha del siguiente milestone es la fecha en que terminamos la memoria
-      \ganttmilestone{Enviar memoria al director}{2021-12-02} \\
-      \ganttbar{Elaborar la presentación}{2021-12-03}{2021-12-16} \\
-      \ganttmilestone{Ensayo de la presentación}{2021-12-16} \\
-      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \end{ganttchart}
-  \end{center}
-  \caption{Diagrama de gantt de ejemplo}
-  \label{fig:gantt}
-\end{figure}
+\begin{table}[ht]
+	\begin{tabularx}{\linewidth}{@{}|l|X|X|l|@{}}
+		\hline
+		\rowcolor[HTML]{C0C0C0}
+		\textbf{Nombre de tarea} & \textbf{Inicio} & \textbf{Fin} \\ \hline
+		\multicolumn{3}{|l|}{\textbf{1. Configuración inicial y planificación.}} \\ \hline
+		1.1 Definición del problema. & 24/06/25 & 01/07/25 \\ \hline
+		1.2 Creación del repositorio. & 02/07/25 & 10/07/25 \\ \hline
+		1.3 Configuración de DVC/Git LFS. & 11/07/25 & 17/07/25 \\ \hline
+		1.4 Selección y prueba de herramienta de etiquetado. & 02/07/25 & 15/07/25 \\ \hline
+		\multicolumn{3}{|l|}{\textbf{2. Preparación de datos y etiquetado.}} \\ \hline
+		2.1 Análisis de videos, definición de eventos. & 16/07/25 & 04/08/25 \\ \hline
+		2.2 Definición del esquema de etiquetado. & 05/08/25 & 18/08/25 \\ \hline
+		2.3 Extracción de \textit{frames}. & 05/08/25 & 22/08/25 \\ \hline
+		2.4 Etiquetado del quirófano 1. & 25/08/25 & 11/09/25 \\ \hline
+		2.5 Etiquetado del quirófano 2. & 25/08/25 & 11/09/25 \\ \hline
+		\multicolumn{3}{|l|}{\textbf{3. Desarrollo del modelo.}} \\ \hline
+		3.1 Realización de pruebas y selección del modelo base. & 12/09/25 & 01/10/25 \\ \hline
+		3.2 Configuración de MLflow. & 18/07/25 & 22/07/25 \\ \hline
+		3.3 Evaluación del modelo y ajuste de umbrales. & 02/10/25 & 21/10/25 \\ \hline
+		3.4 Evaluación final y métricas por estado. & 22/10/25 & 10/11/25 \\ \hline
+		\multicolumn{3}{|l|}{\textbf{4. Inferencia e integración.}} \\ \hline
+		4.1 Desarrollo de la aplicación prototipo. & 07/09/25 & 24/09/25 \\ \hline
+		4.2 Diseño del esquema de base de datos. & 02/09/25 & 04/09/25 \\ \hline
+		4.3 Empaquetamiento del modelo y sus APIs. & 11/11/25 & 20/11/25 \\ \hline
+		4.4 Realización de pruebas \textit{end-to-end}. & 25/11/25 & 01/12/25 \\ \hline
+		\multicolumn{3}{|l|}{\textbf{5. Elaboración de documentos.}} \\ \hline
+		5.1 Elaboración del informe de avance del proyecto. & 02/10/25 & 03/10/25 \\ \hline
+		5.2 Elaboración del video de demostración de la solución. & 15/03/26 & 01/04/26 \\ \hline
+		5.3 Confección de la memoria (TTF A). & 05/12/25 & 21/12/25 \\ \hline
+		5.4 Confección de la memoria (TTF B). & 01/03/26 & 15/03/26 \\ \hline
+		5.5 Aplicación de correcciones y ajustes en la memoria. & 01/04/26 & 10/04/26 \\ \hline
+		5.6 Documentación de código, herramientas y experimentos. & 19/12/25 & 30/12/25 \\ \hline
+		5.7 Creación del documento de recomendaciones. & 31/12/25 & 07/01/26 \\ \hline
+		\multicolumn{3}{|l|}{\textbf{6. Presentación del trabajo.}} \\ \hline
+		6.1 Presentación final y defensa pública del trabajo. & 12/04/26 & 20/04/26 \\ \hline
+	\end{tabularx}
+	\caption{Resumen de tareas del cronograma de trabajo.}
+	\label{tab:wbs}
+\end{table}
 
 
+\clearpage % Flush pending floats before switching to landscape
 \begin{landscape}
-\begin{figure}[htpb]
-\centering 
-\includegraphics[height=.85\textheight]{./Figuras/Gantt-2.png}
-\caption{Ejemplo de diagrama de Gantt (apaisado).} %Modificar este título acorde.
-\label{fig:diagGantt}
-\end{figure}
-
+	\begin{figure}[ht!]
+		\centering
+		\begin{ganttchart}[
+			hgrid,
+			x unit=0.05cm,
+			y unit title=0.5cm,
+			y unit chart=0.42cm,
+			time slot format=isodate,
+			time slot unit=day,
+			bar height=0.4,
+			group height=0.4,
+			milestone height=0.4,
+			title height=0.7,
+			bar/.style={fill=blue!20},
+			group/.style={fill=blue!40},
+			milestone/.style={fill=gray},
+			bar label font=\small,
+			group label font=\small\bfseries,
+			milestone label font=\small
+			]{2025-06-24}{2026-04-26}
+			\gantttitlecalendar{year, month=shortname} \\
+			% Milestones
+			\ganttmilestone[name=start]{Inicio}{2025-06-24} \\
+			
+			
+			% Add vertical rules for each month start
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-07-01} % July
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-08-01} % August
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-09-01} % September
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-10-01} % October
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-11-01} % November
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-12-01} % December
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-01-01} % January
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-02-01} % February
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-03-01} % March
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-04-01} % April
+			
+			
+			% Phase 1
+			\ganttgroup[name=group_1]{1. Configuración inicial y planificación}{2025-06-24}{2025-07-15} \\
+			\ganttbar[name=task_1_1]{1.1 Definición del problema}{2025-06-24}{2025-07-01} \\
+			\ganttbar[name=task_1_2]{1.2 Creación del repositorio}{2025-07-02}{2025-07-10} \\
+			\ganttbar[name=task_1_3]{1.3 Configuración de DVC/Git LFS}{2025-07-11}{2025-07-17} \\
+			\ganttbar[name=task_1_4]{1.4 Selección y prueba de herramienta de etiquetado}{2025-07-02}{2025-07-15} \\
+			\ganttlink{task_1_1}{task_1_2}
+			\ganttlink{task_1_1}{task_1_4}
+			\ganttlink{task_1_2}{task_1_3}
+			
+			
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-07-01} % July
+\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-08-01} % August
+\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-09-01} % September
+\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-10-01} % October
+\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-11-01} % November
+\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-12-01} % December
+\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-01-01} % January
+\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-02-01} % February
+\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-03-01} % March
+\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-04-01} % April
+			
+			% Phase 2
+			\ganttgroup[name=group_2]{2. Preparación de datos y etiquetado}{2025-07-16}{2025-09-11} \\
+			\ganttbar[name=task_2_1]{2.1 Análisis de videos, definición de eventos}{2025-07-16}{2025-08-04} \\
+			\ganttbar[name=task_2_2]{2.2 Definición del esquema de etiquetado}{2025-08-05}{2025-08-18} \\
+			\ganttbar[name=task_2_3]{2.3 Extracción de \textit{frames}}{2025-08-05}{2025-08-22} \\
+			\ganttbar[name=task_2_4]{2.4 Etiquetado del quirófano 1}{2025-08-25}{2025-09-11} \\
+			\ganttbar[name=task_2_5]{2.5 Etiquetado del quirófano 2}{2025-08-25}{2025-09-11} \\
+			\ganttlink{task_1_4}{task_2_1}
+			\ganttlink{task_2_1}{task_2_2}
+			\ganttlink{task_2_1}{task_2_3}
+			\ganttlink{task_2_2}{task_2_4}
+			\ganttlink{task_2_3}{task_2_4}
+			\ganttlink{task_2_3}{task_2_5}
+			
+						\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-07-01} % July
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-08-01} % August
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-09-01} % September
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-10-01} % October
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-11-01} % November
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-12-01} % December
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-01-01} % January
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-02-01} % February
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-03-01} % March
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-04-01} % April
+			% Phase 3
+			\ganttgroup[name=group_3]{3. Desarrollo del modelo}{2025-09-12}{2025-11-10} \\
+			\ganttbar[name=task_3_1]{3.1 Realización de pruebas y selección del modelo base}{2025-09-12}{2025-10-01} \\
+			\ganttbar[name=task_3_2]{3.2 Configuración de MLflow}{2025-07-18}{2025-07-22} \\
+			\ganttbar[name=task_3_3]{3.3 Evaluación del modelo y ajuste de umbrales}{2025-10-02}{2025-10-21} \\
+			\ganttbar[name=task_3_4]{3.4 Evaluación final y métricas por estado}{2025-10-22}{2025-11-10} \\
+			\ganttlink{task_1_3}{task_3_2}
+			\ganttlink{task_2_4}{task_3_1}
+			\ganttlink{task_2_5}{task_3_1}
+			\ganttlink{task_3_1}{task_3_3}
+			\ganttlink{task_3_3}{task_3_4}
+			\ganttlink{task_3_2}{task_3_1}
+			
+						\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-07-01} % July
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-08-01} % August
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-09-01} % September
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-10-01} % October
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-11-01} % November
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-12-01} % December
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-01-01} % January
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-02-01} % February
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-03-01} % March
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-04-01} % April
+			% Phase 4
+			\ganttgroup[name=group_4]{4. Inferencia e integración}{2025-07-02}{2025-12-18} \\
+			\ganttbar[name=task_4_1]{4.1 Desarrollo de la aplicación prototipo}{2025-09-07}{2025-09-24} \\
+			\ganttbar[name=task_4_2]{4.2 Diseño del esquema de base de datos}{2025-09-02}{2025-09-04} \\
+			\ganttbar[name=task_4_3]{4.3 Empaquetamiento del modelo y sus APIs}{2025-11-11}{2025-11-20} \\
+			\ganttbar[name=task_4_4]{4.4 Realización de pruebas \textit{end-to-end}}{2025-11-20}{2025-12-01} \\
+			\ganttlink{task_1_1}{task_4_2}
+			\ganttlink{task_4_2}{task_4_1}
+			\ganttlink{task_3_4}{task_4_3}
+			\ganttlink{task_4_3}{task_4_4}
+			
+						\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-07-01} % July
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-08-01} % August
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-09-01} % September
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-10-01} % October
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-11-01} % November
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-12-01} % December
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-01-01} % January
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-02-01} % February
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-03-01} % March
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-04-01} % April
+			% Phase 5
+			\ganttgroup[name=group_5]{5. Elaboración de documentos}{2025-07-02}{2026-02-11} \\
+			\ganttbar[name=task_5_1]{5.1 Elaboración del informe de avance del proyecto}{2025-10-02}{2025-10-03} \\
+			\ganttbar[name=task_5_2]{5.2 Elaboración del video de demostración de la solución}{2026-03-15}{2026-04-01} \\
+			\ganttbar[name=task_5_3]{5.3 Confección de la memoria (TTF A)}{2025-12-04}{2025-12-21} \\
+			\ganttbar[name=task_5_4]{5.4 Confección de la memoria (TTF B)}{2026-03-01}{2026-03-15} \\
+			\ganttbar[name=task_5_5]{5.5 Aplicación de correcciones y ajustes en la memoria}{2026-04-01}{2026-04-10} \\
+			\ganttbar[name=task_5_6]{5.6 Documentación de código, herramientas y experimentos}{2025-12-19}{2025-12-30} \\
+			\ganttbar[name=task_5_7]{5.7 Creación del documento de recomendaciones}{2025-12-31}{2026-01-07} \\
+			\ganttlink{task_1_1}{task_5_1}
+			\ganttlink{task_4_4}{task_5_6}
+			\ganttlink{task_4_4}{task_5_3}
+			\ganttlink{task_5_3}{task_5_4}
+			\ganttlink{task_5_4}{task_5_2}
+			\ganttlink{task_5_2}{task_5_5}
+			\ganttlink{task_5_6}{task_5_7}
+			
+						\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-07-01} % July
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-08-01} % August
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-09-01} % September
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-10-01} % October
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-11-01} % November
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-12-01} % December
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-01-01} % January
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-02-01} % February
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-03-01} % March
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-04-01} % April
+			
+			% Phase 6
+			\ganttgroup[name=group_6]{6. Presentación del trabajo}{2026-04-12}{2026-04-20} \\
+			\ganttbar[name=task_6_1]{6.1 Presentación final y defensa pública del trabajo}{2026-04-12}{2026-04-20} \\
+			\ganttlink{task_5_5}{task_6_1}
+			
+						\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-07-01} % July
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-08-01} % August
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-09-01} % September
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-10-01} % October
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-11-01} % November
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-12-01} % December
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-01-01} % January
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-02-01} % February
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-03-01} % March
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-04-01} % April
+			% Final milestone
+			\ganttmilestone[name=end]{Fin}{2026-04-26} \\
+			\ganttlink{task_4_1}{end}
+			\ganttlink{task_5_1}{end}
+			\ganttlink{task_5_7}{end}
+			\ganttlink{task_6_1}{end}
+			
+						\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-07-01} % July
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-08-01} % August
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-09-01} % September
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-10-01} % October
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-11-01} % November
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2025-12-01} % December
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-01-01} % January
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-02-01} % February
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-03-01} % March
+			\ganttvrule[vrule/.style={draw=gray!50, dashed}]{}{2026-04-01} % April
+		\end{ganttchart}
+		\caption{Diagrama de Gantt del proyecto.}
+		\label{fig:gantt_chart}
+	\end{figure}
 \end{landscape}
-
-\end{consigna}
 
 
 \section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-	\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-	\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
-
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
-
-Incluir la aclaración de si se emplea como moneda el peso argentino (ARS) o si se usa moneda extranjera (USD, EUR, etc). Si es en moneda extranjera se debe indicar la tasa de conversión respecto a la moneda local en una fecha dada.
-
-\end{consigna}
+A continuación se detalla el presupesto del proyecto con sus costos expresados en dólares estadounidenses.
 
 \begin{table}[htpb]
 \centering
@@ -512,24 +675,19 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+  
+ \multicolumn{1}{|l|}{Mano de obra del responsable} &
+  \multicolumn{1}{c|}{700 h} & 
+  \multicolumn{1}{c|}{\$50} &
+  \multicolumn{1}{c|}{\$35 000} \\ \hline
+ 
+  \multicolumn{1}{|l|}{Computadora personal con \textit{GPU}} &
+ \multicolumn{1}{c|}{1} & 
+ \multicolumn{1}{c|}{\$5 000} &
+ \multicolumn{1}{c|}{\$5 000} \\ \hline
+
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{\$40 000} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
@@ -537,23 +695,15 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+ \multicolumn{1}{|l|}{Almacenamiento de videos en la nube } &
+\multicolumn{1}{c|}{50GB} & 
+\multicolumn{1}{c|}{\$0,15 por GB/mes} &
+\multicolumn{1}{c|}{\$75} \\ \hline
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{\$75} \\ \hline
 \rowcolor[HTML]{C0C0C0}
 \multicolumn{3}{|c|}{TOTAL} &
-   \\ \hline
+  \multicolumn{1}{|c|}{\$40 075} \\ \hline
 \end{tabularx}%
 \end{table}
 
@@ -656,18 +806,27 @@ En cambio, las acciones de validación suelen considerar al entregable como ``ca
 \section{15. Procesos de cierre}    
 \label{sec:cierre}
 
-\begin{consigna}{red}
-Establecer las pautas de trabajo para realizar una reunión final de evaluación del proyecto, tal que contemple las siguientes actividades:
-
+Una vez finalizado el proyecto, el proceso de cierre contemplará las siguientes actividades:
 \begin{itemize}
-	\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:\\
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento a aplicar. 
-	\item Identificación de las técnicas y procedimientos útiles e inútiles que se emplearon, los problemas que surgieron y cómo se solucionaron:\\
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento para dejar registro.
-	\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:\\
-	  - Indicar esto y quién financiará los gastos correspondientes.
-\end{itemize}
+	\item Análisis de las pautas de trabajo:
+	\begin{itemize}
+		\item[] Responsable: \authorname
+		\item[] Procedimiento:
+		\begin{itemize}
+			\item Contraste entre el plan y la ejecución: Analizar si se respetaron los plazos originales, si se cumplieron los requerimientos y si el plan de mitigación de riesgos fue el adecuado.
+			\item Transición del repositorio de código al cliente, entregar la documentación asociada y los hallazgos del proyecto.
+			\item Repaso de recomendaciones para la implementación en producción, modificaciones a la arquitectura implementada y modelo desarrollado.
+		\end{itemize}
+	\end{itemize}
+		\item Análisis de las pautas de trabajo:
+	\begin{itemize}
+		\item[] Responsable: \authorname
+		\item[] Procedimiento:
+		\begin{itemize}
+			\item Se realizará en modalidad virtual y participarán los interesados, jurados y personal docente. Concluida la presentación se agradecerá formalmente a los directores, colaboradores, docentes y autoridades de la Maestría en Computación de Borde.
 
-\end{consigna}
+		\end{itemize}
+		\end{itemize}
+\end{itemize}
 
 \end{document}
