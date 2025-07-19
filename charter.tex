@@ -681,7 +681,7 @@ Descripción &
   \multicolumn{1}{c|}{\$50} &
   \multicolumn{1}{c|}{\$35 000} \\ \hline
  
-  \multicolumn{1}{|l|}{Computadora personal con \textit{GPU}} &
+  \multicolumn{1}{|l|}{Computadora personal con GPU} &
  \multicolumn{1}{c|}{1} & 
  \multicolumn{1}{c|}{\$5 000} &
  \multicolumn{1}{c|}{\$5 000} \\ \hline
@@ -711,72 +711,97 @@ Descripción &
 \section{13. Gestión de riesgos}
 \label{sec:riesgos}
 
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
- 
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos de forma negativa)
+a) Identificación de los riesgos y estimación de sus consecuencias. Para este análisis se asigna un puntaje a cada riesgo en función de dos aspectos distintos: severidad (S)  y probabilidad de ocurrencia (O). La valoración se realiza asignando un número entre 1 y 10 que depende de qué tan severo es el riesgo y qué tan alta es su probabilidad de ocurrencia (a mayor importancia, más grande es el puntaje asignado).
+
+Riesgo 1: la calidad y cantidad de los videos provistos por el cliente no son adecuadas para el problema que se desea resolver.
+
 \begin{itemize}
-	\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de (O). 
+	\item Severidad (S): 8.\\
+	Los datos de entrenamiento son cruciales para los algoritmos de inteligencia artificial, ya que tienen un impacto directo en su efectividad.
+	\item Probabilidad de ocurrencia (O): 8.\\
+	Es la primera vez que el cliente plantea un experimento de esta naturaleza y se desconocen las características óptimas que debe tener el \textit{set} de datos para lograr los resultados buscados.
+	%El cliente no cuenta con experiencia previa en la recolección de datos para entrenar algoritmos de visión por computadora. 
 \end{itemize}   
 
-Riesgo 2:
+Riesgo 2: los recursos computacionales (GPU) disponibles son insuficientes para completar el entrenamiento y ensayo de algoritmos en tiempo y forma.
 \begin{itemize}
-	\item Severidad (S): X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
+	\item Severidad (S): 6. \\
+	%Si ocurriera esta situación, el entrenamiento y ensayo de modelos de visión por computadora tomaría más tiempo que el planificado. Si bien esto demoraría las entregas del proyecto, el impacto no debería ser extremadamente alto dado que el cliente no tiene pensado implementar el sistema en producción en el corto plazo.
+	Esta situación introduciría demoras en el proyecto,  o afectar la calidad del resultado para la evaluación de la solución
+	\item Probabilidad de ocurrencia (O): 4. \\
+	En el supuesto que la computadora adquirida no fuera suficiente, se negociará con el cliente opciones de procesamiento en la nube a fin de evitar demoras en las tareas de entrenamiento.
 \end{itemize}
 
-Riesgo 3:
+Riesgo 3: los algoritmos desarrollados no logran identificar los eventos de interés para el cliente (incumplimiento de los requerimientos funcionales).
 \begin{itemize}
-	\item Severidad (S):  X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
+	\item Severidad (S): 6. \\
+	Si bien el objetivo del cliente es automatizar el relevamiento de los quirófanos en tiempo real, la obtención de resultados parciales o un subconjunto de eventos identificados y las lecciones aprendidas serán igualmente valiosos para mejorar procesos existentes y también como punto de partida para futuros proyectos. 
+	\item Probabilidad de ocurrencia (O): 4. \\
+	Se considera media-baja, dado que existen técnicas bien conocidas que son efectivas para resolver problemas similares.
 \end{itemize}
 
+Riesgo 4: incumplimiento del cronograma del proyecto debido a enfermedad del responsable, compromisos laborales u otros imprevistos.
+\begin{itemize}
+	\item Severidad (S): 6.\\
+	El cronograma del proyecto incluye suficiente holgura en las tareas para acomodar imprevistos en la ejecución al reducir la presión sobre el camino crítico.
+	\item Probabilidad de ocurrencia (O): 6.\\
+	Se considera este valor dado que es un proyecto con un único responsable para todo el trabajo.  
+\end{itemize}   
 
-b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
+Riesgo 5: falta de soporte por parte del cliente en relación al etiquetado de las imágenes, cuando se requieran conocimientos específicos o para validar resultados.
+\begin{itemize}
+	\item Severidad (S): 8.\\
+	El éxito del proyecto depende en gran medida de la disponibilidad de los expertos en el área de manejo y administración de quirófanos. 
+	\item Probabilidad de ocurrencia (O): 2.\\
+	El cliente cuenta con personas idóneas que pueden ayudar a responder consultas y dar soporte cuando sea necesario. 
+\end{itemize}   
+
+
+
+%b) Tabla de gestión de riesgos:   (El RPN se calcula como RPN=SxO)
+b) Tabla de gestión de riesgos.
+En el siguiente cuadro se listan los riesgos del proyecto junto con sus valores de severidad (S) y probabilidad de ocurrencia (O). Además, se indica el ``número de prioridad de riesgo" (RPN), que se calcula multiplicando la severidad por la probabilidad de ocurrencia (RPN = S x O).
+
 
 \begin{table}[htpb]
-\centering
-\begin{tabularx}{\linewidth}{@{}|X|c|c|c|c|c|c|@{}}
-\hline
-\rowcolor[HTML]{C0C0C0} 
-Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-\end{tabularx}%
+	\centering
+	\begin{tabularx}{\linewidth}{@{}|X|c|c|c|c|c|c|@{}}
+		\hline
+		\rowcolor[HTML]{C0C0C0} 
+		Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
+		La calidad y cantidad de los videos provistos por el cliente no son adecuadas para el problema que se desea resolver.    & 8  & 8  &    \textcolor{red}{64} &  8  &  3  &  24    \\ \hline
+		Los recursos computacionales (GPU) disponibles son insuficientes para completar el entrenamiento y ensayo de algoritmos en tiempo y forma.   & 6  & 4  &  24   & -   &  -  &  -    \\ \hline
+		Los algoritmos desarrollados no logran identificar los eventos de interés para el cliente (incumplimiento de los requerimientos funcionales).   & 6  &  4 &  24   & -   &  -  &   -   \\ \hline
+		Incumplimiento del cronograma del proyecto, debido a enfermedad del responsable, compromisos laborales u otros imprevistos.     &  6 &   6 &  \textcolor{red}{36}   &  3  &  6  &  18    \\ \hline
+		Falta de soporte por parte del cliente en relación al etiquetado de las imágenes, cuando se requieran conocimientos específicos o para validar resultados.    & 8   & 2  &   16  &  -  &  -  &   -   \\ \hline
+	\end{tabularx}
 \end{table}
+\FloatBarrier
 
 Criterio adoptado: 
+se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 30.
 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a...
-
-Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
+Nota: los campos marcados con (*) en la tabla indican los valores resultantes luego de haber aplicado la mitigación.
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
- 
-Riesgo 1: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
-  \begin{itemize}
-	\item Severidad (S*): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O*): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
-	\end{itemize}
 
-Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
- 
-Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
 
-\end{consigna}
+Riesgo 1: se acordó con el cliente la entrega de videos de un hospital por el período de 2 semanas, con posibilidad de expandir la cantidad de ejemplos en caso de ser necesario.
+\begin{itemize}
+	\item Severidad (S): 8.\\
+	La severidad de este riesgo no se modifica luego del plan de mitigación.
+	\item Probabilidad de ocurrencia (O): 3.\\
+	Se reduce considerablemente porque se acordará con el cliente la cantidad y las características de los videos adicionales a capturar en base a las necesidades puntuales o evento en particular a detectar.
+\end{itemize}  
+
+Riesgo 4: se incluyó un tiempo de contingencia en la planificación de las tareas que conforman el camino crítico, de manera de mitigar posibles demoras causadas por imprevistos como enfermedades, viajes o mudanzas por trabajo, etc.
+\begin{itemize}
+	\item Severidad (S): 3. \\
+	El tiempo adicional incluido en la planificación ayuda a reducir el impacto de una posible demora.
+	\item Probabilidad de ocurrencia (O): 6.\\
+	El plan no afecta la probabilidad de ocurrencia de este riesgo.
+\end{itemize}   
+%\end{consigna}
 
 
 \section{14. Gestión de la calidad}
